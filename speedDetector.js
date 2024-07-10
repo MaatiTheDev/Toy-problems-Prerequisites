@@ -1,4 +1,3 @@
-// challenge-2/speedDetector.js
 
 const readline = require('readline');
 

@@ -1,4 +1,3 @@
-// challenge-1/studentGradeGenerator.js
 
 const readline = require('readline');
 

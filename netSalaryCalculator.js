@@ -1,4 +1,3 @@
-// challenge-3/netSalaryCalculator.js
 
 const readline = require('readline');
 
@@ -8,25 +7,18 @@ const rl = readline.createInterface({
 });
 
 function calculatePayee(annualTaxableIncome) {
-  // Implement PAYE calculation based on KRA tax bands
-  // This is a simplified version and may need to be updated
   if (annualTaxableIncome <= 288000) return annualTaxableIncome * 0.1;
   if (annualTaxableIncome <= 388000) return 28800 + (annualTaxableIncome - 288000) * 0.25;
   return 53300 + (annualTaxableIncome - 388000) * 0.3;
 }
 
 function calculateNHIF(grossPay) {
-  // Implement NHIF calculation based on the NHIF rates
-  // This is a simplified version and may need to be updated
   if (grossPay <= 5999) return 150;
   if (grossPay <= 7999) return 300;
-  // ... add more conditions for other salary ranges
-  return 1700; // maximum deduction
+  return 1700; 
 }
 
 function calculateNSSF(pensionablePay) {
-  // Implement NSSF calculation
-  // This is a simplified version and may need to be updated
   const rate = 0.06;
   const maxDeduction = 1080;
   return Math.min(pensionablePay * rate, maxDeduction);
